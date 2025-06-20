@@ -1,0 +1,37 @@
+table Misures
+	lineageTag: ad58ef65-d78b-4fb3-adb2-4fcc335465d7
+
+	measure Measure = BLANK()
+		formatString: 0
+		displayFolder: Gigi
+		lineageTag: 82de4286-d8e8-4e48-8a14-a18dd9f7ee83
+
+	measure 'Measure 2' = SUM(gigi_number[Value])
+		formatString: 0
+		lineageTag: da514b80-afe0-494e-87b0-882a8fe4f2a1
+
+	measure 'Measure 3' = COUNT(gigi_number[Value])
+		formatString: 0
+		lineageTag: 8227f1ba-7404-4972-af4d-19cbbb19fe21
+
+	measure 'Measure 4' =
+			
+			VAR up = Misures[Measure 2]
+			VAR down = Misures[Measure 3]
+			RETURN DIVIDE(up,down,0)
+		lineageTag: 18f69bac-4680-414f-9e65-c3e83b9665f8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Misures = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,5 @@
+relationship 36ac6b8b-f3aa-40ef-a517-44a7ad4083a1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: SerieTemporale.Date
+	toColumn: LocalDateTable_4f468efe-25ae-469f-a828-158b394de51a.Date
+

@@ -1,0 +1,26 @@
+table SerieTemporale
+	lineageTag: 8e4471f5-cb74-4020-9f24-f994f816a007
+
+	column Date
+		formatString: General Date
+		lineageTag: 48a5d0bb-fb63-4ed6-b6b3-e9c058daa16d
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: 36ac6b8b-f3aa-40ef-a517-44a7ad4083a1
+			defaultHierarchy: LocalDateTable_4f468efe-25ae-469f-a828-158b394de51a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SerieTemporale = calculated
+		mode: import
+		source =
+				
+				CALENDAR(DATE(2020, 1, 1), EOMONTH(NOW(),MONTH(NOW()))
+				)
+
+	annotation PBI_Id = 65a4faed83614637b376ece6a65955d9
+

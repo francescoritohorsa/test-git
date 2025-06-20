@@ -1,0 +1,18 @@
+table gigi_number
+	lineageTag: 083e2641-e094-438c-b4e2-a4405d498d27
+
+	column Value
+		formatString: 0
+		lineageTag: 1dc4416b-c2e1-47c9-ae8a-b63af7ec4371
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Value]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition gigi_number = calculated
+		mode: import
+		source = GENERATESERIES(0, 505, 1)
+
+	annotation PBI_Id = a34c745731744b26b43aeae890b6d591
+
