@@ -12,7 +12,7 @@ table gigi_number
 
 	partition gigi_number = calculated
 		mode: import
-		source = GENERATESERIES(0, 505, 1)
+		source = GENERATESERIES(0, 20, 1)
 
 	annotation PBI_Id = a34c745731744b26b43aeae890b6d591
 

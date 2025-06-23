@@ -1,0 +1,106 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "4940d2b4a1ae92ea1d82",
+  "position": {
+    "x": 61.628081929284178,
+    "y": 63.95366992661566,
+    "z": 0,
+    "height": 631.39714127549644,
+    "width": 1182.5614966430569,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Misures"
+                    }
+                  },
+                  "Property": "Measure 3"
+                }
+              },
+              "queryRef": "Misures.Measure 3",
+              "nativeQueryRef": "Measure 3"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Misures"
+                    }
+                  },
+                  "Property": "Measure 4"
+                }
+              },
+              "queryRef": "Misures.Measure 4",
+              "nativeQueryRef": "Measure 4"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Misures"
+                    }
+                  },
+                  "Property": "Measure 2"
+                }
+              },
+              "queryRef": "Misures.Measure 2",
+              "nativeQueryRef": "Measure 2"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Misures"
+                  }
+                },
+                "Property": "Measure 3"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "legend": [
+        {
+          "properties": {
+            "showGradientLegend": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
