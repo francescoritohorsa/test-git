@@ -1,0 +1,85 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "5936ff7882b99a00b182",
+  "position": {
+    "x": 10.465145987991653,
+    "y": 0,
+    "z": 0,
+    "height": 719.76948517409255,
+    "width": 1269.7710465429873,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Fact"
+                        }
+                      },
+                      "Property": "voci_bilancio_label"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "CountNonNull(Fact.voci_bilancio_label)",
+              "nativeQueryRef": "Count of voci_bilancio_label"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Fact"
+                        }
+                      },
+                      "Property": "voci_bilancio_value"
+                    }
+                  },
+                  "Function": 4
+                }
+              },
+              "queryRef": "Sum(Fact.voci_bilancio_value)",
+              "nativeQueryRef": "Max of voci_bilancio_value"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Fact"
+                      }
+                    },
+                    "Property": "voci_bilancio_label"
+                  }
+                },
+                "Function": 5
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

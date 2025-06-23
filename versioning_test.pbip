@@ -3,7 +3,7 @@
   "artifacts": [
     {
       "report": {
-        "path": "fff.Report"
+        "path": "versioning_test.Report"
       }
     }
   ],

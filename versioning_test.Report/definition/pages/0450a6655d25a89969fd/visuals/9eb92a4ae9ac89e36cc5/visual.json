@@ -28,7 +28,23 @@
                     }
                   },
                   {
-                    "value": " dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
+                    "value": " dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+                    "textStyle": {
+                      "fontFamily": "Verdana",
+                      "fontSize": "14pt",
+                      "color": "#646b6b"
+                    }
+                  },
+                  {
+                    "value": "Duis aute irure dolor",
+                    "textStyle": {
+                      "fontFamily": "Candara",
+                      "fontSize": "14pt",
+                      "color": "#d9b300"
+                    }
+                  },
+                  {
+                    "value": " in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
                     "textStyle": {
                       "fontFamily": "Verdana",
                       "fontSize": "14pt",
