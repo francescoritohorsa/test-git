@@ -6,7 +6,7 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["Misures"]
+annotation PBI_QueryOrder = ["Misures","Fact"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
@@ -19,6 +19,7 @@ ref table gigi_number
 ref table SerieTemporale
 ref table DateTableTemplate_565b6e24-5f46-460f-a470-40b0850d7911
 ref table LocalDateTable_4f468efe-25ae-469f-a828-158b394de51a
+ref table Fact
 
 ref cultureInfo en-US
 
